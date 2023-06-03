@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no,minimal-ui">
+  <title>Tower</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <canvas id="canvas" class="hide">
+
+  </canvas>
+  <div class="landing">
+    
+  </div>  
+
+  <script>
+    let gameWidth = document.innerWidth;
+    let gameHeight = document.innerHeight;
+    const gameCanvas = {
+
+      canvas: document.createElement("canvas"),
+      start: function () {
+        this.canvas.width = gameWidth;
+        this.canvas.height = gameHeight;
+        this.context = this.canvas.getContext("2d");
+        document.body.appendChild(this.canvas, document.body.childNodes[0]);
+      }
+    }
+  </script>
+</body>
+
+</html>
