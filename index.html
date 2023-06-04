@@ -6,30 +6,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no,minimal-ui">
   <title>Tower</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js"></script>
+  <script src="https://unpkg.com/matter-js@0.14.2/build/matter.js"></script>
+ 
 </head>
 
 <body>
-  <canvas id="canvas" class="hide">
-
-  </canvas>
-  <div class="landing">
-    
-  </div>  
-
-  <script>
-    let gameWidth = document.innerWidth;
-    let gameHeight = document.innerHeight;
-    const gameCanvas = {
-
-      canvas: document.createElement("canvas"),
-      start: function () {
-        this.canvas.width = gameWidth;
-        this.canvas.height = gameHeight;
-        this.context = this.canvas.getContext("2d");
-        document.body.appendChild(this.canvas, document.body.childNodes[0]);
-      }
-    }
-  </script>
+  <div class="container">
+    <canvas id="canvas">
+    </canvas>
+  </div>
+  <div class="content">
+    <script src="sketch.js"></script>
+    <script src="block.js"></script>
+    <script src="box.js"></script>
+    <script src="score.js"></script>
+    <script src="ground.js"></script>
+    <script src="slingshot.js"></script>
+  </div>
+  
 </body>
 
-</html>
+</html> 
